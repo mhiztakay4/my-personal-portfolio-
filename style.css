@@ -1,0 +1,417 @@
+/* 1. Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes managing widths/heights easier */
+}
+
+/* 2. Basic Body Styles */
+body {
+    font-family: sans-serif; /* A clean, readable font */
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light background */
+    color: #333; /* Dark text */
+}
+
+/* 3. Section Padding (to give content breathing room) */
+section {
+    padding: 60px 20px;
+    margin-bottom: 20px;
+}
+#home {
+    /* Background and text color for the hero */
+    background-color: #2c3e50; 
+    color: white; 
+    text-align: center;
+    padding: 100px 20px; /* More vertical space */
+}
+
+/* Center and manage the content container */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 180px; /* Size of the image */
+    height: 180px;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover;
+    border: 5px solid #3498db; /* A colored border for emphasis */
+    margin-bottom: 20px;
+}
+
+/* Headings */
+#home h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+#home h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #3498db; /* Bright blue color */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none; /* Removes the underline from the link */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.cta-button:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+}
+#about {
+    background-color: white; /* White background for contrast */
+    text-align: center;
+    max-width: 900px; /* Keep the content from stretching too wide */
+    margin: 20px auto; 
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#about h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#about p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+}
+
+/* Resume Button */
+.resume-button {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #2ecc71; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #27ae60;
+}
+/* Styling the Skills Section */
+#skills {
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center;
+}
+
+#skills h2 {
+    color: #3498db; /* Blue heading color */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Arrange the skills list */
+.skills-list {
+    display: flex; /* Use Flexbox to put skill categories side-by-side */
+    justify-content: center;
+    gap: 50px; /* Space between the two <ul> lists */
+    flex-wrap: wrap; /* Allows them to stack on smaller screens */
+}
+
+.skills-list ul {
+    list-style: none; /* Remove default bullet points */
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.skills-list ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.skills-list ul li:last-child {
+    border-bottom: none; /* No line under the last item */
+}
+/* Styling the Projects Section */
+#projects {
+    background-color: white;
+    text-align: center;
+}
+
+#projects h2 {
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/* The Grid Container */
+.project-grid {
+    display: grid;
+    /* Create columns: 2 columns if the screen is large enough, otherwise 1 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Project Card */
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    overflow: hidden; /* Ensures image corners match card corners */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card h3 {
+    padding: 15px 15px 5px;
+    color: #3498db;
+}
+
+.project-card p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Project Links (Code/Demo) */
+.project-links a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 15px 15px 0;
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.project-links .live-link {
+    background-color: #e74c3c; /* Different color for the live link */
+}
+/* Styling the Contact Section */
+#contact {
+    background-color: #ecf0f1; /* Very light blue/gray background */
+    text-align: center;
+}
+
+#contact h2 {
+    color: #e74c3c; /* Reddish heading color */
+    margin-bottom: 10px;
+}
+
+#contact p {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allows user to resize vertically, but not horizontally */
+}
+
+.submit-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.submit-button:hover {
+    background-color: #27ae60;
+}
+
+.social-links {
+    margin-top: 25px;
+    font-size: 1.1em;
+}
+
+.social-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+/* Styling the Footer */
+footer {
+    background-color: #34495e; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* --- MEDIA QUERIES FOR MOBILE DEVICES (Screens smaller than 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Adjust General Padding and Font Size */
+    body {
+        font-size: 16px; /* Ensure base font is readable */
+    }
+    
+    section {
+        padding: 40px 15px; /* Reduce padding on sections */
+    }
+
+    /* 2. Hero Section Adjustments */
+    #home h1 {
+        font-size: 2em; /* Smaller main heading */
+    }
+    #home h2 {
+        font-size: 1.2em; /* Smaller subheading */
+    }
+
+    /* 3. About Section Adjustments */
+    #about {
+        padding: 30px 15px; /* Adjust padding for smaller container */
+    }
+
+    /* 4. Skills Section Adjustments */
+    .skills-list {
+        /* Force the skills lists to stack vertically instead of side-by-side */
+        flex-direction: column; 
+        gap: 20px;
+    }
+    
+    /* 5. Projects Section Adjustments */
+    .project-grid {
+        /* CSS Grid automatically handles stacking with 'auto-fit' and 'minmax(300px, 1fr)', 
+           but we can force one column for very small devices if needed. */
+        grid-template-columns: 1fr; 
+    }
+}
+/* --- MEDIA QUERIES FOR SMALL PHONES (Screens smaller than 480px) --- */
+@media (max-width: 480px) {
+
+    /* 1. Hero Image Size */
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* 2. Contact Form Button */
+    .submit-button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    /* 3. Footer Text */
+    footer p {
+        font-size: 0.8em;
+    }
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode #home {
+    background-color: #1f1f1f; 
+    
+}
+
+body.dark-mode #about,
+body.dark-mode .skills-list ul {
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #contact {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .contact-form {
+    background: #2c2c2c;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background-color: #383838;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .submit-button {
+    background-color: #4CAF50;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #BB86FC;
+}
